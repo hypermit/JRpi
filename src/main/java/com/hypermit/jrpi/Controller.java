@@ -20,6 +20,8 @@ public class Controller {
     private String gpioSwitchCommand;
     private byte gpioBitStatus;
 
+    private static final String BTN_STYLE_ON_AND_OFF[] = {"-fx-body-color: aliceblue",
+            "-fx-body-color: chartreuse"};
     @FXML
     private Label lblConnectionStatus;
     @FXML
@@ -191,6 +193,7 @@ public class Controller {
 
         gpioSwitchCommand = "gpio write " + gpioPinNumber + " " + gpioBitStatus;
         sshConnect.send(gpioSwitchCommand);
+        btnArray[btnNumber].setStyle(BTN_STYLE_ON_AND_OFF[gpioBitStatus]);
     }
 
     // convert gpio number to wiring pi number
