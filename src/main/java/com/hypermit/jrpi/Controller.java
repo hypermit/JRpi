@@ -2,11 +2,7 @@ package com.hypermit.jrpi;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
-
+import javafx.scene.control.*;
 /**
  * @author: hypermit
  * Date: 2016
@@ -132,6 +128,33 @@ public class Controller {
         boolean bDisconnect = sshConnect.disconnect();
         if (bDisconnect) {
             lblConnectionStatus.setText("No connection");
+        }
+    }
+
+    public void btnGpioAction(ActionEvent actionEvent) {
+        Object btnClicked = actionEvent.getSource();
+        if (btnClicked == btn2 || btnClicked == btn4) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Gpio Information");
+            alert.setHeaderText(null);
+            alert.setContentText("This gpio pin is 5v power.");
+            alert.showAndWait();
+        } else if (btnClicked == btn1 || btnClicked == btn17) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Gpio Information");
+            alert.setHeaderText(null);
+            alert.setContentText("This gpio pin is 3.3v power.");
+            alert.showAndWait();
+        } else if (btnClicked == btn6 || btnClicked == btn9 || btnClicked == btn14 ||
+                btnClicked == btn20 || btnClicked == btn25 || btnClicked == btn30 ||
+                btnClicked == btn34 || btnClicked == btn39) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Gpio Information");
+            alert.setHeaderText(null);
+            alert.setContentText("This gpio pin is GND.");
+            alert.showAndWait();
+        } else {
+            System.out.println("other gpio clicked");
         }
     }
 }
