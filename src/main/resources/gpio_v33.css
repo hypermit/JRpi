@@ -1,0 +1,9 @@
+.button
+{
+    -fx-font-size: 12;
+    -fx-min-width: 32;
+    -fx-min-height: 32;
+    -fx-max-width: 32;
+    -fx-max-height: 32;
+    -fx-body-color: orange;
+}
