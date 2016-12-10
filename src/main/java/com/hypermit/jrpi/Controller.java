@@ -19,7 +19,6 @@ public class Controller {
     private String gpioStatus;
     private String gpioSwitchCommand;
     private byte gpioBitStatus;
-
     private static final String BTN_STYLE_ON_AND_OFF[] = {"-fx-body-color: aliceblue",
             "-fx-body-color: chartreuse"};
     @FXML
@@ -114,7 +113,6 @@ public class Controller {
     private Button btn38;
     @FXML
     private Button btn40;
-
     private Button btn0;
 
     public void btnConnectAction(ActionEvent actionEvent) {
@@ -177,20 +175,18 @@ public class Controller {
     }
 
     private void switchGpio(byte btnNumber) throws IOException, JSchException {
-        Button btnArray[] = {btn0 ,btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn10,
+        Button btnArray[] = {btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn10,
                 btn11, btn12, btn13, btn14, btn15, btn16, btn17, btn18, btn19, btn20,
                 btn21, btn22, btn23, btn24, btn25, btn26, btn27, btn28, btn29, btn30,
                 btn31, btn32, btn33, btn34, btn35, btn36, btn37, btn38, btn39, btn40};
         gpioPinNumber = gpio2WiringPin(btnNumber);
         gpioMode = "gpio mode " + gpioPinNumber + " out";
         sshConnect.send(gpioMode);
-
         gpioReadCommand = "gpio read " + gpioPinNumber;
         gpioStatus = sshConnect.send(gpioReadCommand);
         // get first char from gpio read to remove "\n" and convert it to byte
-        gpioBitStatus = Byte.parseByte(gpioStatus.substring(0,1));
+        gpioBitStatus = Byte.parseByte(gpioStatus.substring(0, 1));
         gpioBitStatus = (byte) (1 - gpioBitStatus);
-
         gpioSwitchCommand = "gpio write " + gpioPinNumber + " " + gpioBitStatus;
         sshConnect.send(gpioSwitchCommand);
         btnArray[btnNumber].setStyle(BTN_STYLE_ON_AND_OFF[gpioBitStatus]);
@@ -198,7 +194,7 @@ public class Controller {
 
     // convert gpio number to wiring pi number
     private byte gpio2WiringPin(byte btPinNumber) {
-        byte wiringPiPins[] = {-1, -1, -1 , 8, -1, 9, -1, 7, 15, -1, 16, 0, 1, 2, -1, 3, 4, -1, 5, 12,
+        byte wiringPiPins[] = {-1, -1, -1, 8, -1, 9, -1, 7, 15, -1, 16, 0, 1, 2, -1, 3, 4, -1, 5, 12,
                 -1, 13, 6, 14, 10, -1, 11, 30, 31, 21, -1, 22, 26, 23, -1, 24, 27, 25, 28, -1, 29};
         return wiringPiPins[btPinNumber];
     }
