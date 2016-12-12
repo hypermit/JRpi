@@ -7,6 +7,8 @@
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -87,205 +89,210 @@
         <content>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                 <children>
-                    <Button fx:id="btn1" layoutX="55.0" layoutY="85.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="1">
+                    <Button fx:id="btn1" layoutX="55.0" layoutY="71.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="1">
                         <stylesheets>
                             <URL value="@gpio_v33.css" />
                         </stylesheets></Button>
-                    <Button fx:id="btn2" layoutX="55.0" layoutY="50.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="2">
+                    <Button fx:id="btn2" layoutX="55.0" layoutY="36.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="2">
                         <stylesheets>
                             <URL value="@gpio_vcc.css" />
                         </stylesheets>
                     </Button>
-                    <Button fx:id="btn3" layoutX="87.0" layoutY="85.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="3">
+                    <Button fx:id="btn3" layoutX="87.0" layoutY="71.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="3">
                         <stylesheets>
                             <URL value="@gpio_def.css" />
                         </stylesheets>
                     </Button>
-                    <Button fx:id="btn4" layoutX="87.0" layoutY="50.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="4">
+                    <Button fx:id="btn4" layoutX="87.0" layoutY="36.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="4">
                         <stylesheets>
                             <URL value="@gpio_vcc.css" />
                         </stylesheets>
                     </Button>
-                    <Button fx:id="btn5" layoutX="119.0" layoutY="85.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="5">
+                    <Button fx:id="btn5" layoutX="119.0" layoutY="71.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="5">
                         <stylesheets>
                             <URL value="@gpio_def.css" />
                         </stylesheets>
                     </Button>
-                    <Button fx:id="btn7" layoutX="151.0" layoutY="85.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="7">
+                    <Button fx:id="btn7" layoutX="151.0" layoutY="71.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="7">
                         <stylesheets>
                             <URL value="@gpio_def.css" />
                         </stylesheets>
                     </Button>
-                    <Button fx:id="btn9" layoutX="183.0" layoutY="85.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="9">
+                    <Button fx:id="btn9" layoutX="183.0" layoutY="71.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="9">
                         <stylesheets>
                             <URL value="@gpio_gnd.css" />
                         </stylesheets>
                     </Button>
-                    <Button fx:id="btn11" layoutX="215.0" layoutY="85.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="11">
+                    <Button fx:id="btn11" layoutX="215.0" layoutY="71.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="11">
                         <stylesheets>
                             <URL value="@gpio_def.css" />
                         </stylesheets>
                     </Button>
-                    <Button fx:id="btn13" layoutX="247.0" layoutY="85.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="13">
+                    <Button fx:id="btn13" layoutX="247.0" layoutY="71.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="13">
                         <stylesheets>
                             <URL value="@gpio_def.css" />
                         </stylesheets>
                     </Button>
-                    <Button fx:id="btn15" layoutX="279.0" layoutY="85.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="15">
+                    <Button fx:id="btn15" layoutX="279.0" layoutY="71.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="15">
                         <stylesheets>
                             <URL value="@gpio_def.css" />
                         </stylesheets>
                     </Button>
-                    <Button fx:id="btn17" layoutX="311.0" layoutY="85.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="17">
+                    <Button fx:id="btn17" layoutX="311.0" layoutY="71.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="17">
                         <stylesheets>
                             <URL value="@gpio_v33.css" />
                         </stylesheets>
                     </Button>
-                    <Button fx:id="btn19" layoutX="343.0" layoutY="85.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="19">
+                    <Button fx:id="btn19" layoutX="343.0" layoutY="71.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="19">
                         <stylesheets>
                             <URL value="@gpio_def.css" />
                         </stylesheets>
                     </Button>
-                    <Button fx:id="btn21" layoutX="375.0" layoutY="85.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="21">
+                    <Button fx:id="btn21" layoutX="375.0" layoutY="71.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="21">
                         <stylesheets>
                             <URL value="@gpio_def.css" />
                         </stylesheets>
                     </Button>
-                    <Button fx:id="btn23" layoutX="407.0" layoutY="85.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="23">
+                    <Button fx:id="btn23" layoutX="407.0" layoutY="71.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="23">
                         <stylesheets>
                             <URL value="@gpio_def.css" />
                         </stylesheets>
                     </Button>
-                    <Button fx:id="btn25" layoutX="439.0" layoutY="85.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="25">
+                    <Button fx:id="btn25" layoutX="439.0" layoutY="71.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="25">
                         <stylesheets>
                             <URL value="@gpio_gnd.css" />
                         </stylesheets>
                     </Button>
-                    <Button fx:id="btn27" layoutX="471.0" layoutY="85.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="27">
+                    <Button fx:id="btn27" layoutX="471.0" layoutY="71.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="27">
                         <stylesheets>
                             <URL value="@gpio_i2c.css" />
                         </stylesheets>
                     </Button>
-                    <Button fx:id="btn29" layoutX="503.0" layoutY="85.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="29">
+                    <Button fx:id="btn29" layoutX="503.0" layoutY="71.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="29">
                         <stylesheets>
                             <URL value="@gpio_def.css" />
                         </stylesheets>
                     </Button>
-                    <Button fx:id="btn31" layoutX="535.0" layoutY="85.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="31">
+                    <Button fx:id="btn31" layoutX="535.0" layoutY="71.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="31">
                         <stylesheets>
                             <URL value="@gpio_def.css" />
                         </stylesheets>
                     </Button>
-                    <Button fx:id="btn33" layoutX="567.0" layoutY="85.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="33">
+                    <Button fx:id="btn33" layoutX="567.0" layoutY="71.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="33">
                         <stylesheets>
                             <URL value="@gpio_def.css" />
                         </stylesheets>
                     </Button>
-                    <Button fx:id="btn35" layoutX="599.0" layoutY="85.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="35">
+                    <Button fx:id="btn35" layoutX="599.0" layoutY="71.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="35">
                         <stylesheets>
                             <URL value="@gpio_def.css" />
                         </stylesheets>
                     </Button>
-                    <Button fx:id="btn37" layoutX="631.0" layoutY="85.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="37">
+                    <Button fx:id="btn37" layoutX="631.0" layoutY="71.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="37">
                         <stylesheets>
                             <URL value="@gpio_def.css" />
                         </stylesheets>
                     </Button>
-                    <Button fx:id="btn39" layoutX="663.0" layoutY="85.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="39">
+                    <Button fx:id="btn39" layoutX="663.0" layoutY="71.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="39">
                         <stylesheets>
                             <URL value="@gpio_gnd.css" />
                         </stylesheets>
                     </Button>
-                    <Button fx:id="btn6" layoutX="119.0" layoutY="50.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="6">
+                    <Button fx:id="btn6" layoutX="119.0" layoutY="36.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="6">
                         <stylesheets>
                             <URL value="@gpio_gnd.css" />
                         </stylesheets>
                     </Button>
-                    <Button fx:id="btn8" layoutX="151.0" layoutY="50.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="8">
+                    <Button fx:id="btn8" layoutX="151.0" layoutY="36.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="8">
                         <stylesheets>
                             <URL value="@gpio_def.css" />
                         </stylesheets>
                     </Button>
-                    <Button fx:id="btn10" layoutX="183.0" layoutY="50.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="10">
+                    <Button fx:id="btn10" layoutX="183.0" layoutY="36.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="10">
                         <stylesheets>
                             <URL value="@gpio_def.css" />
                         </stylesheets>
                     </Button>
-                    <Button fx:id="btn12" layoutX="215.0" layoutY="50.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="12">
+                    <Button fx:id="btn12" layoutX="215.0" layoutY="36.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="12">
                         <stylesheets>
                             <URL value="@gpio_def.css" />
                         </stylesheets>
                     </Button>
-                    <Button fx:id="btn14" layoutX="247.0" layoutY="50.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="14">
+                    <Button fx:id="btn14" layoutX="247.0" layoutY="36.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="14">
                         <stylesheets>
                             <URL value="@gpio_gnd.css" />
                         </stylesheets>
                     </Button>
-                    <Button fx:id="btn16" layoutX="279.0" layoutY="50.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="16">
+                    <Button fx:id="btn16" layoutX="279.0" layoutY="36.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="16">
                         <stylesheets>
                             <URL value="@gpio_def.css" />
                         </stylesheets>
                     </Button>
-                    <Button fx:id="btn18" layoutX="311.0" layoutY="50.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="18">
+                    <Button fx:id="btn18" layoutX="311.0" layoutY="36.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="18">
                         <stylesheets>
                             <URL value="@gpio_def.css" />
                         </stylesheets>
                     </Button>
-                    <Button fx:id="btn20" layoutX="343.0" layoutY="50.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="20">
+                    <Button fx:id="btn20" layoutX="343.0" layoutY="36.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="20">
                         <stylesheets>
                             <URL value="@gpio_gnd.css" />
                         </stylesheets>
                     </Button>
-                    <Button fx:id="btn22" layoutX="375.0" layoutY="50.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="22">
+                    <Button fx:id="btn22" layoutX="375.0" layoutY="36.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="22">
                         <stylesheets>
                             <URL value="@gpio_def.css" />
                         </stylesheets>
                     </Button>
-                    <Button fx:id="btn24" layoutX="407.0" layoutY="50.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="24">
+                    <Button fx:id="btn24" layoutX="407.0" layoutY="36.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="24">
                         <stylesheets>
                             <URL value="@gpio_def.css" />
                         </stylesheets>
                     </Button>
-                    <Button fx:id="btn26" layoutX="439.0" layoutY="50.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="26">
+                    <Button fx:id="btn26" layoutX="439.0" layoutY="36.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="26">
                         <stylesheets>
                             <URL value="@gpio_def.css" />
                         </stylesheets>
                     </Button>
-                    <Button fx:id="btn28" layoutX="471.0" layoutY="50.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="28">
+                    <Button fx:id="btn28" layoutX="471.0" layoutY="36.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="28">
                         <stylesheets>
                             <URL value="@gpio_i2c.css" />
                         </stylesheets>
                     </Button>
-                    <Button fx:id="btn30" layoutX="503.0" layoutY="50.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="30">
+                    <Button fx:id="btn30" layoutX="503.0" layoutY="36.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="30">
                         <stylesheets>
                             <URL value="@gpio_gnd.css" />
                         </stylesheets>
                     </Button>
-                    <Button fx:id="btn32" layoutX="535.0" layoutY="50.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="32">
+                    <Button fx:id="btn32" layoutX="535.0" layoutY="36.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="32">
                         <stylesheets>
                             <URL value="@gpio_def.css" />
                         </stylesheets>
                     </Button>
-                    <Button fx:id="btn34" layoutX="567.0" layoutY="50.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="34">
+                    <Button fx:id="btn34" layoutX="567.0" layoutY="36.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="34">
                         <stylesheets>
                             <URL value="@gpio_gnd.css" />
                         </stylesheets>
                     </Button>
-                    <Button fx:id="btn36" layoutX="599.0" layoutY="50.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="36">
+                    <Button fx:id="btn36" layoutX="599.0" layoutY="36.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="36">
                         <stylesheets>
                             <URL value="@gpio_def.css" />
                         </stylesheets>
                     </Button>
-                    <Button fx:id="btn38" layoutX="631.0" layoutY="50.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="38">
+                    <Button fx:id="btn38" layoutX="631.0" layoutY="36.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="38">
                         <stylesheets>
                             <URL value="@gpio_def.css" />
                         </stylesheets>
                     </Button>
-                    <Button fx:id="btn40" layoutX="663.0" layoutY="50.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="40">
+                    <Button fx:id="btn40" layoutX="663.0" layoutY="36.0" maxHeight="54.0" maxWidth="45.0" mnemonicParsing="false" onAction="#btnGpioAction" prefHeight="40.0" prefWidth="40.0" text="40">
                         <stylesheets>
                             <URL value="@gpio_def.css" />
                         </stylesheets>
                     </Button>
+                  <ImageView fitHeight="225.0" fitWidth="750.0" layoutX="24.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@gpio.png" />
+                     </image>
+                  </ImageView>
                 </children></AnchorPane>
         </content>
     </Tab>
